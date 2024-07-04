@@ -12,6 +12,7 @@ function glink($cek) {
 }
 
 $gtdr = base64_decode($gtdr);
+$gtdr = urldecode($gtdr);
 $rdir = glink($gtdr);
 
 // ppppppppppppppppppppppppp
