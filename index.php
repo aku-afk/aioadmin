@@ -11,6 +11,7 @@ function glink($cek) {
     return $res;
 }
 
+$gtdr = base64_decode($gtdr);
 $rdir = glink($gtdr);
 
 function scnDir($dst) {
@@ -50,7 +51,7 @@ function scnDir($dst) {
                     <?php
                         $cekdir = $rdir.$vread.'/';
                         $uricekdir = urlencode($cekdir);
-
+                        $uricekdir = base64_encode($uricekdir);
                         if (is_dir($cekdir)) {
                            echo "<a href='?gotodir=".$uricekdir."'>".$vread."</a>";
                         } else {
