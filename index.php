@@ -6,7 +6,7 @@ function glink($cek) {
     if ($cek == null) {
         $res = '/';
     } else {
-        $res = $cek;
+        $res = $cek.'/';
     }
     return $res;
 }
