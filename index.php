@@ -46,7 +46,7 @@ function scnDir($dst) {
              <tr>
                 <td>
                     <?php
-                        $cekdir = $rdir.$vread;
+                        $cekdir = $rdir.$vread.'/';
                         $uricekdir = urlencode($cekdir);
 
                         if (is_dir($cekdir)) {
