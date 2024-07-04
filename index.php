@@ -32,6 +32,9 @@ function scnDir($dst) {
     body {
         font-family: 'Courier New', Courier, monospace;
     }
+    table {
+        font-size: 10px;
+    }
 </style>
 <body>
     <table>
