@@ -1,5 +1,6 @@
 <?php
 // CREDIT mmtprjct.id
+// tes up
 $scn = scandir('/');
 
 ?>
