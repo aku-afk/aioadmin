@@ -37,6 +37,7 @@ function scnDir($dst) {
     }
 </style>
 <body>
+    <?php echo $gtdr; ?>
     <table>
         <thead>
             <td>name</td>
