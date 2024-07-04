@@ -1,6 +1,17 @@
 <?php
 
-$rdir = '/';
+$gtdr = $_GET['gotodir'];
+
+function glink($cek) {
+    if ($cek == null) {
+        $res = '/';
+    } else {
+        $res = $cek;
+    }
+    return $res;
+}
+
+$rdir = glink($gtdr);
 
 function scnDir($dst) {
     $res = scandir($dst);
@@ -36,8 +47,10 @@ function scnDir($dst) {
                 <td>
                     <?php
                         $cekdir = $rdir.$vread;
+                        $uricekdir = urlencode($cekdir);
+
                         if (is_dir($cekdir)) {
-                           echo "DIR_  ".$vread;
+                           echo "<a href='?gotodir=".$uricekdir."'>".$vread."</a>";
                         } else {
                             echo $vread;
                         }
