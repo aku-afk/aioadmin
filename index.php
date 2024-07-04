@@ -1,5 +1,5 @@
 <?php
-
+// CREDIT mmtprjct.id
 $scn = scandir('/');
 
 ?>
